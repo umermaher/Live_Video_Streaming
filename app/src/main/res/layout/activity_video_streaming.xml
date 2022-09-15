@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VideoStreamingActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/remoteVideoViewContainer"
+        android:background="@color/white"/>
+
+    <FrameLayout
+        android:id="@+id/localVideoViewContainer"
+        android:layout_width="140sp"
+        android:layout_height="240sp"
+        android:layout_margin="10sp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginBottom="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:layout_width="0sp"
+            android:layout_height="50sp"
+            android:layout_weight="1.4"
+            android:padding="10sp"
+            android:src="@drawable/ic_mic"
+            android:id="@+id/micBtn"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:padding="10sp"
+            android:background="@drawable/call_btn_bg"
+            android:src="@drawable/ic_call"
+            android:id="@+id/endCallBtn"
+            app:tint="@color/white" />
+        <ImageView
+            android:layout_width="0sp"
+            android:layout_height="50sp"
+            android:layout_weight="1.4"
+            android:padding="10sp"
+            android:src="@drawable/ic_camera"
+            android:id="@+id/switchCameraBtn"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
